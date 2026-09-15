@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezioni di equitazione - Blue Country (ASD)</title>
+    <link rel="stylesheet" href="demoMan.css">
+</head>
+
+<body class="page-lezioni">
+
+    
+    <header class="header-titolo" style="display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%;">
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <h1 style="text-align: center; margin: 0;">Blue Country</h1>
+            <img src="fotoM/logo.png" alt="Logo Blue Country ASD" class="logo-titolo"
+                style="margin-left: 8px; margin-right: 0; margin-top: 5px; transform: scaleX(-1) !important; mix-blend-mode: multiply !important; filter: none !important; border: none !important; outline: none !important; box-shadow: none !important;">
+        </div>
+        <p class="sottotitolo" style="text-align: center; margin-top: 5px;">Centro Ippico ASD</p>
+    </header>
+
+    
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chiSiamo.html">Chi siamo</a></li>
+            <li><a href="pensioneCavalli.html">Pensione cavalli</a></li>
+            <li><a href="lezioni.html">Scuola</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
+
+    
+    <main>
+        <div class="carosello-container" style="margin-top: 50px;">
+            <div class="carosello-slides">
+                <div class="slide active"><img src="fotoM/scuola1.webp" alt="Lezione di equitazione 1"></div>
+                <div class="slide"><img src="fotoM/scuola2.webp" alt="Lezione di equitazione 2"></div>
+                <div class="slide"><img src="fotoM/scuola3.webp" alt="Lezione di equitazione 3"></div>
+                <div class="slide"><img src="fotoM/scuola4.webp" alt="Lezione di equitazione 4"></div>
+                <div class="slide"><img src="fotoM/scuola5.webp" alt="Lezione di equitazione 5"></div>
+                <div class="slide"><img src="fotoM/scuola6.webp" alt="Lezione di equitazione 6"></div>
+                <div class="slide"><img src="fotoM/scuola7.webp" alt="Lezione di equitazione 7"></div>
+                <div class="slide"><img src="fotoM/scuola8.webp" alt="Lezione di equitazione 8"></div>
+                <div class="slide"><img src="fotoM/scuola9.webp" alt="Lezione di equitazione 9"></div>
+                <div class="slide"><img src="fotoM/scuola10.webp" alt="Lezione di equitazione 10"></div>
+                <div class="slide"><img src="fotoM/scuola11.webp" alt="Lezione di equitazione 11"></div>
+                <div class="slide"><img src="fotoM/scuola12.webp" alt="Lezione di equitazione 12"></div>
+                <div class="slide"><img src="fotoM/scuola13.webp" alt="Lezione di equitazione 13"></div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+        <section class="intro" style="margin-top: 30px;">
+            <h2 class="titolo-sezione" style="text-align: left; margin-bottom: 15px;">Scuola e formazione</h2>
+            <p style="color: #ffffff; font-size: 17px; line-height: 1.6; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); text-align: left; margin-bottom: 20px;">
+                Dalle basi della monta fino al perfezionamento agonistico, offriamo percorsi formativi completi per ogni livello di esperienza:
+            </p>
+            <ul style="color: #ffffff; font-size: 16px; line-height: 1.8; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); padding-left: 20px; text-align: left; margin-bottom: 20px;">
+                <li><strong style="color: #5dd8eb;">Esordienti:</strong> Pensati per chi sale in sella per la prima volta, in un ambiente sicuro e stimolante.</li>
+                <li><strong style="color: #5dd8eb;">Cavalieri avanzati:</strong> Programmi specifici per chi desidera perfezionare la propria tecnica.</li>
+                <li><strong style="color: #5dd8eb;">Nuove discipline:</strong> Un percorso in crescita con passione verso la disciplina del completo.</li>
+                <li><strong style="color: #5dd8eb;">Stage formativi:</strong> Incontri di approfondimento con esperti del settore.</li>
+                <li><strong style="color: #5dd8eb;">Centri estivi:</strong> Attività all'aperto, contatto diretto con la natura e tanto divertimento per i più giovani.</li>
+            </ul>
+            <p style="color: #ffffff; font-size: 17px; line-height: 1.6; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); text-align: left; background: rgba(93, 216, 235, 0.08); padding: 18px; border-radius: 12px; border: 1px solid rgba(93, 216, 235, 0.3);">
+                Mettiamo sempre al centro la sicurezza, il rispetto dell'animale e la crescita personale di ciascun allievo. <strong style="color: #5dd8eb;">Vi aspettiamo in campo per iniziare un percorso insieme.</strong>
+            </p>
+        </section>
+    </main>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            if (slides.length === 0) return;
+
+            if (index >= slides.length) {
+                slideIndex = 0;
+            } else if (index < 0) {
+                slideIndex = slides.length - 1;
+            } else {
+                slideIndex = index;
+            }
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[slideIndex].classList.add('active');
+        }
+
+        function moveSlide(step) {
+            showSlide(slideIndex + step);
+        }
+
+        setInterval(() => {
+            moveSlide(1);
+        }, 4000);
+    </script>
+
+</body>
+</html>

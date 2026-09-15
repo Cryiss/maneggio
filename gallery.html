@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Blue Country (ASD)</title>
+    <link rel="stylesheet" href="demoMan.css">
+    <style>
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 45px;
+            padding: 40px 20px;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Sfumatura applicata solo alle immagini */
+        .gallery-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 82%, rgba(0,0,0,0) 100%);
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 82%, rgba(0,0,0,0) 100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.01);
+        }
+
+        /* --- STILE SUPER MODERNO PER IL VIDEO --- */
+        .video-card {
+            width: 100%;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .video-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+
+        .video-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding: 0 5px;
+        }
+
+        .video-title {
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .video-badge {
+            background: rgba(93, 216, 235, 0.15);
+            color: #5dd8eb;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .gallery-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+    </style>
+</head>
+
+<body class="page-gallery">
+
+    <header class="header-titolo" style="display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%;">
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <h1 style="text-align: center; margin: 0;">Blue Country</h1>
+            <img src="fotoM/logo.png" alt="Logo Blue Country ASD" class="logo-titolo" 
+                 style="margin-left: 8px; margin-right: 0; margin-top: 5px; transform: scaleX(-1) !important; mix-blend-mode: multiply !important; filter: none !important; border: none !important; outline: none !important; box-shadow: none !important;">
+        </div>
+        <p class="sottotitolo" style="text-align: center; margin-top: 5px;">Centro Ippico ASD</p>
+    </header>
+
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chiSiamo.html">Chi siamo</a></li>
+            <li><a href="pensioneCavalli.html">Pensione cavalli</a></li>
+            <li><a href="lezioni.html">Scuola</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-centrato">
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="fotoM/bea1.JPG" alt="Galleria Blue Country 1">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea2.JPG" alt="Galleria Blue Country 2">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea3.JPG" alt="Galleria Blue Country 3">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea4.JPG" alt="Galleria Blue Country 4">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea5.JPG" alt="Galleria Blue Country 5">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea6.JPG" alt="Galleria Blue Country 6">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea7.JPG" alt="Galleria Blue Country 7">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea8.JPG" alt="Galleria Blue Country 8">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea9.JPG" alt="Galleria Blue Country 9">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea10.JPG" alt="Galleria Blue Country 10">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea11.JPG" alt="Galleria Data Country 11">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea12.webp" alt="Galleria Blue Country 12">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea13.webp" alt="Galleria Blue Country 13">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea14.webp" alt="Galleria Blue Country 14">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea15.jpg" alt="Galleria Blue Country 15">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea16.JPG" alt="Galleria Blue Country 16">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea19.jpg" alt="Galleria Blue Country 19">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea23.jpg" alt="Galleria Blue Country 23">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea22.jpg" alt="Galleria Blue Country 22">
+            </div>
+            <div class="gallery-item">
+                <img src="fotoM/bea24.jpg" alt="Galleria Blue Country 24">
+            </div>
+
+          <div class="gallery-item" style="margin-bottom: -45px;">
+    <video autoplay loop muted playsinline preload="auto" 
+        style="
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            border-radius: 4px;
+            outline: none; 
+            border: none;
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 82%, rgba(0,0,0,0) 100%);
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 82%, rgba(0,0,0,0) 100%);
+        ">
+        <!-- Metti prima l'MP4 codificato in H.264 -->
+        <source src="fotoM/bea20.mov" type="video/mp4">
+        <!-- Lascia il .mov come riserva per i dispositivi Apple che lo supportano -->
+        <source src="fotoM/bea20.mov" type="video/quicktime">
+        Il tuo browser non supporta il tag video.
+    </video>
+</div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
